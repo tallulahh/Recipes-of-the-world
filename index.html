@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="HandheldFriendly" content="true">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Josefin+Sans|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b65372fec8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Dinner Party</title>
+</head>
+
+<body>
+  <header>
+    <nav class="main-nav">
+      <div class="logo">
+        <a href="index.html">Dyn|at|mine</a>
+      </div>
+      <div class="hamburger-menu">
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-list">
+        <a href="index.html"><li class="nav-link">Home</li></a>
+        <a href="#countryGenerator"><li class="nav-link">Pick A Random Country</li></a>
+        <a href="recipes.html"><li class="nav-link">Recipes</li></a>
+        <a href="index-of-recipes.html"><li class="nav-link">List of Countries</li></a>
+        <a href="community.html"><li class="nav-link">Join the Community</li></a>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-clipped">
+      <div class="hero-textbox">
+        <h1 class="main-heading">Dyn-at-Mine Dinner Party</h1>
+        <h2 class="sub-heading">Learn about cuisines all over the world</h2>
+        <a href="#list" class="cta-btn">Start</a>
+      </div>
+    </div>
+  </section>
+  <section class="guests" id="list">
+    <div class="mission">
+      <h1>Why not mix it up at your weekly dinner parties?</h1>
+      <p>Our mission is for you to experience the different worldly cultures and cuisines from the comfort of your kitchen..
+        <br>So check out our Generator of Random Countries and start researching street food, starters, traditional
+        deserts. Discover more about the local culture of dance, art, history and teach all your fellow
+        Dinner Party-ers! </p>
+      <a href="#countryGenerator" class="cta-btn">Random Country Generator</a>
+    </div>
+
+  </section>
+  <section class="generator">
+    <div id="countryGenerator">
+      <button class="cta-btn" onclick="generateCountry()"><a>Choose a country!</a></button>
+      <a href="country-template.html" class="country" id="country" onclick="switchText()"></a>
+      <a class="cta-btn recipe" href="recipes.html">See recipes!</a>
+    </div>
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/CSSRulePlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/MotionPathPlugin.min.js"></script>
+  <script src="index.js"></script>
+
+
+</body>
+
+</html>

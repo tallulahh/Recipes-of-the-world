@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="HandheldFriendly" content="true">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Josefin+Sans|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b65372fec8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Dinner Party | Country Name</title>
+
+</head>
+
+<body onload="switchText(); hideFact()">
+
+  <header>
+    <nav class="main-nav">
+      <div class="logo">
+        <a href="index.html">Dyn|at|mine</a>
+      </div>
+      <div class="hamburger-menu">
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-list">
+        <a href="index.html"><li class="nav-link">Home</li></a>
+        <a href="#countryGenerator"><li class="nav-link">Pick A Random Country</li></a>
+        <a href="recipes" name="recipes"><li class="nav-link">Recipes</li></a>
+        <a href="index-of-recipes.html"><li class="nav-link">List of Countries</li></a>
+        <a href="community.html"><li class="nav-link">Join the Community</li></a>
+        </a>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero-recipe" id="countryHero">
+    <div class="hero-clipped">
+      <div class="hero-textbox">
+        <h1 class="main-heading" id="countryHeroName">Country Name</h1>
+        <a href="#info" class="cta-btn">Discover more</a>
+      </div>
+    </div>
+  </section>
+  <section class="country-info" id="info">
+    <div class="country-intro">
+      <div class="intro-text">
+        <img id="countryFlag" class="flag" src="" alt="">
+        <h1 id="countryName">Country Name</h1>
+        <p id="countryPara">blkj albkjalk jlaj blakshd lkjablksj lajslbkja; lksjdf lag</p>
+      </div>
+
+    </div>
+    <div class="country-fact" id="funFact">
+      <p>Fun Facts:</p>
+    </div>
+    <div class="country-fact-question" id="questionMark">
+      <button>?</button>
+    </div>
+    <div class="featured-link">
+      <p>See featured recipes below</p>
+    </div>
+  </section>
+  <section class="country-featured-recipes">
+    <h2>Top Featured</h4>
+      <div class="row">
+        <div class="small-box">
+
+        </div>
+        <div class="small-box">
+
+        </div>
+        <div class="small-box">
+
+        </div>
+      </div>
+      <h2>Full List of Country Dishes</h2>
+      <div class="country-recipe-full-list" id="full-list">
+
+        <div class="starter-dish">
+          <h4>Starters</h4>
+          <ul>
+            <a href="recipe-template.html">
+              <li>Dish 1</li>
+            </a>
+            <a href="recipe-template.html">
+              <li>Dish 2</li>
+            </a>
+            <a href="recipe-template.html">
+              <li>Dish 3</li>
+            </a>
+            <a href="recipe-template.html">
+              <li>Dish 4</li>
+            </a>
+            <a href="recipe-template.html">
+              <li>Dish 5</li>
+            </a>
+          </ul>
+        </div>
+        <div class="main-dish">
+          <h4>Mains</h4>
+          <ul>
+            <a href="recipe-template.html">
+              <li>Dish 1</li>
+            </a>
+            <a href="recipe-template.html">
+              <li>Dish 2</li>
+            </a>
+            <a href="recipe-template.html">
+              <li>Dish 3</li>
+            </a>
+            <a href="recipe-template.html">
+              <li>Dish 4</li>
+            </a>
+            <a href="recipe-template.html">
+              <li>Dish 5</li>
+            </a>
+          </ul>
+        </div>
+        <div class="desert-dish">
+          <h4>Deserts</h4>
+          <ul>
+            <a href="recipe-template.html">
+              <li>Dish 1</li>
+            </a>
+            <a href="recipe-template.html">
+              <li>Dish 2</li>
+            </a>
+            <a href="recipe-template.html">
+              <li>Dish 3</li>
+            </a>
+            <a href="recipe-template.html">
+              <li>Dish 4</li>
+            </a>
+            <a href="recipe-template.html">
+              <li>Dish 5</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <div class="photo-week-link">
+        <a href="index-of-recipes.html">See full list of countries</a>
+      </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/CSSRulePlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/MotionPathPlugin.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

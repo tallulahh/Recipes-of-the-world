@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="HandheldFriendly" content="true">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Josefin+Sans|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/b65372fec8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Dinner Party</title>
+</head>
+
+<body>
+  <header>
+    <nav class="main-nav">
+      <div class="logo" id="indexLogo">
+        <a href="index.html">Dyn|at|mine</a>
+      </div>
+      <div class="hamburger-menu">
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-list">
+        <a href="index.html"><li class="nav-link">Home</li></a>
+        <a href="#countryGenerator"><li class="nav-link">Pick A Random Country</li></a>
+        <a href="recipes.html"><li class="nav-link">Recipes</li></a>
+        <a href="index-of-recipes.html"><li class="nav-link">List of Countries</li></a>
+        <a href="community.html"><li class="nav-link">Join the Community</li></a>
+      </ul>
+    </nav>
+  </header>
+  <!-- <section class="hero">
+    <div class="hero-clipped">
+      <div class="hero-textbox">
+        <h1 class="main-heading">Our Worldly Recipes</h1>
+        <a href="#recipes" class="cta-btn">See recipes</a>
+      </div>
+    </div>
+  </section> -->
+  <section class="index">
+    <div class="letter" id="a">
+      <h1>A</h1>
+      <ul>
+        <a href="country-template.html" onclick="selectCountry()"><li>Afghanistan</li></a>
+        <a href="country-template.html"><li>Albania</li></a>
+        <a href="country-template.html"><li>Algeria</li></a>
+        <a href="country-template.html"><li>Andorra</li></a>
+        <a href="country-template.html"><li>Angola</li></a>
+        <a href="country-template.html"><li>Antigua and Barbuda</li></a>
+        <a href="country-template.html"><li>Argentina</li></a>
+        <a href="country-template.html"><li>Armenia</li></a>
+        <a href="country-template.html"><li>Australia</li></a>
+        <a href="country-template.html"><li>Austria</li></a>
+        <a href="country-template.html"><li>Azerbaijan</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="b">
+      <h1>B</h1>
+      <ul>
+        <a href="country-template.html"><li>Bahrain</li></a>
+        <a href="country-template.html"><li>Bangladesh</li></a>
+        <a href="country-template.html"><li>Barbados</li></a>
+        <a href="country-template.html"><li>Belarus</li></a>
+        <a href="country-template.html"><li>Belgium</li></a>
+        <a href="country-template.html"><li>Belize</li></a>
+        <a href="country-template.html"><li>Benin</li></a>
+        <a href="country-template.html"><li>Bhutan</li></a>
+        <a href="country-template.html"><li>Bolivia</li></a>
+        <a href="country-template.html"><li>Bosnia and Herzegovina</li></a>
+        <a href="country-template.html"><li>Botswana</li></a>
+        <a href="country-template.html"><li>Brazil</li></a>
+        <a href="country-template.html"><li>Brunei</li></a>
+        <a href="country-template.html"><li>Bulgaria</li></a>
+        <a href="country-template.html"><li>Burkina Faso</li></a>
+        <a href="country-template.html"><li>Burundi</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="c">
+      <h1>C</h1>
+      <ul>
+        <a href="country-template.html"><li>Cambodia</li></a>
+        <a href="country-template.html"><li>Cameroon</li></a>
+        <a href="country-template.html"><li>Canada</li></a>
+        <a href="country-template.html"><li>Cape Verde</li></a>
+        <a href="country-template.html"><li>Central African Republic (CAR)</li></a>
+        <a href="country-template.html"><li>Chad</li></a>
+        <a href="country-template.html"><li>Chile</li></a>
+        <a href="country-template.html"><li>China</li></a>
+        <a href="country-template.html"><li>Colombia</li></a>
+        <a href="country-template.html"><li>Comoros</li></a>
+        <a href="country-template.html"><li>The Democratic Republic of Congo</li></a>
+        <a href="country-template.html"><li>The Republic of Congo</li></a>
+        <a href="country-template.html"><li>Costa Rica</li></a>
+        <a href="country-template.html"><li>Croatia</li></a>
+        <a href="country-template.html"><li>Cuba</li></a>
+        <a href="country-template.html"><li>Cyprus</li></a>
+        <a href="country-template.html"><li>Czech Republic</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="d">
+      <h1>D</h1>
+      <ul>
+        <a href="country-template.html"><li>Denmark</li></a>
+        <a href="country-template.html"><li>Djibouti</li></a>
+        <a href="country-template.html"><li>Dominica</li></a>
+        <a href="country-template.html"><li>Dominican Republic</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="e">
+      <h1>E</h1>
+      <ul>
+        <a href="country-template.html"><li>East Timor</li></a>
+        <a href="country-template.html"><li>Ecuador</li></a>
+        <a href="country-template.html"><li>Egypt</li></a>
+        <a href="country-template.html"><li>El Salvador</li></a>
+        <a href="country-template.html"><li>Equatorial Guinea</li></a>
+        <a href="country-template.html"><li>Eritrea</li></a>
+        <a href="country-template.html"><li>Estonia</li></a>
+        <a href="country-template.html"><li>Eswatini (formerly Swaziland)</li></a>
+        <a href="country-template.html"><li>Ethiopia</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="F">
+      <h1>F</h1>
+      <ul>
+        <a href="country-template.html"><li>Fiji</li></a>
+        <a href="country-template.html"><li>Finland</li></a>
+        <a href="country-template.html"><li>France</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="g">
+      <h1>G</h1>
+      <ul>
+        <a href="country-template.html"><li>Gabon</li></a>
+        <a href="country-template.html"><li>Gambia</li></a>
+        <a href="country-template.html"><li>Georgia</li></a>
+        <a href="country-template.html"><li>Germany</li></a>
+        <a href="country-template.html"><li>Ghana</li></a>
+        <a href="country-template.html"><li>Greece</li></a>
+        <a href="country-template.html"><li>Grenada</li></a>
+        <a href="country-template.html"><li>Guatemala</li></a>
+        <a href="country-template.html"><li>Guinea</li></a>
+        <a href="country-template.html"><li>Guinea-Bissau</li></a>
+        <a href="country-template.html"><li>Guyana</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="h">
+      <h1>H</h1>
+      <ul>
+        <a href="country-template.html"><li>Haiti</li></a>
+        <a href="country-template.html"><li>Honduras</li></a>
+        <a href="country-template.html"><li>Holy See (Vatican City)</li></a>
+        <a href="country-template.html"><li>Hungary</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="i">
+      <h1>I</h1>
+      <ul>
+        <a href="country-template.html"><li>Iceland</li></a>
+        <a href="country-template.html"><li>India</li></a>
+        <a href="country-template.html"><li>Indonesia</li></a>
+        <a href="country-template.html"><li>Iran</li></a>
+        <a href="country-template.html"><li>Iraq</li></a>
+        <a href="country-template.html"><li>Ireland</li></a>
+        <a href="country-template.html"><li>Israel</li></a>
+        <a href="country-template.html"><li>Italy</li></a>
+        <a href="country-template.html"><li>Ivory Coast</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="j">
+      <h1>J</h1>
+      <ul>
+        <a href="country-template.html"><li>Jamaica</li></a>
+        <a href="country-template.html"><li>Japan</li></a>
+        <a href="country-template.html"><li>Jordan</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="k">
+      <h1>K</h1>
+      <ul>
+        <a href="country-template.html"><li>Kazakhstan</li></a>
+        <a href="country-template.html"><li>Kenya</li></a>
+        <a href="country-template.html"><li>Kiribati</li></a>
+        <a href="country-template.html"><li>The Rebublic of Kosovo</li></a>
+        <a href="country-template.html"><li>Kuwait</li></a>
+        <a href="country-template.html"><li>Kyrgyzstan</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="l">
+      <h1>L</h1>
+      <ul>
+        <a href="country-template.html"><li>Laos</li></a>
+        <a href="country-template.html"><li>Latvia</li></a>
+        <a href="country-template.html"><li>Lebanon</li></a>
+        <a href="country-template.html"><li>Lesotho</li></a>
+        <a href="country-template.html"><li>Liberia</li></a>
+        <a href="country-template.html"><li>Libya</li></a>
+        <a href="country-template.html"><li>Liechtenstein</li></a>
+        <a href="country-template.html"><li>Lithuania</li></a>
+        <a href="country-template.html"><li>Luxembourg</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="m">
+      <h1>M</h1>
+      <ul>
+        <a href="country-template.html"><li>Macedonia</li></a>
+        <a href="country-template.html"><li>Madagascar</li></a>
+        <a href="country-template.html"><li>Malawi</li></a>
+        <a href="country-template.html"><li>Malaysia</li></a>
+        <a href="country-template.html"><li>Maldives</li></a>
+        <a href="country-template.html"><li>Mali</li></a>
+        <a href="country-template.html"><li>Malta</li></a>
+        <a href="country-template.html"><li>Marshall Islands</li></a>
+        <a href="country-template.html"><li>Mauritania</li></a>
+        <a href="country-template.html"><li>Mauritius</li></a>
+        <a href="country-template.html"><li>Mexico</li></a>
+        <a href="country-template.html"><li>Micronesia</li></a>
+        <a href="country-template.html"><li>Moldova</li></a>
+        <a href="country-template.html"><li>Monaco</li></a>
+        <a href="country-template.html"><li>Mongolia</li></a>
+        <a href="country-template.html"><li>Montenegro</li></a>
+        <a href="country-template.html"><li>Morocco</li></a>
+        <a href="country-template.html"><li>Mozambique</li></a>
+        <a href="country-template.html"><li>Myanmar (formerly Burma)</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="n">
+      <h1>N</h1>
+      <ul>
+        <a href="country-template.html"><li>Namibia</li></a>
+        <a href="country-template.html"><li>Nauru</li></a>
+        <a href="country-template.html"><li>Nepal</li></a>
+        <a href="country-template.html"><li>Netherlands</li></a>
+        <a href="country-template.html"><li>New Zealand</li></a>
+        <a href="country-template.html"><li>Nicaragua</li></a>
+        <a href="country-template.html"><li>Niger</li></a>
+        <a href="country-template.html"><li>Nigeria</li></a>
+        <a href="country-template.html"><li>North Korea</li></a>
+        <a href="country-template.html"><li>Norway</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="o">
+      <h1>O</h1>
+      <ul>
+        <a href="country-template.html"><li>Oman</li></a>
+
+      </ul>
+    </div>
+    <div class="letter" id="p">
+      <h1>P</h1>
+      <ul>
+        <a href="country-template.html"><li>Pakistan</li></a>
+        <a href="country-template.html"><li>Palau</li></a>
+        <a href="country-template.html"><li>Palestine</li></a>
+        <a href="country-template.html"><li>Panama</li></a>
+        <a href="country-template.html"><li>Papua New Guinea</li></a>
+        <a href="country-template.html"><li>Paraguay</li></a>
+        <a href="country-template.html"><li>Peru</li></a>
+        <a href="country-template.html"><li>Philippines</li></a>
+        <a href="country-template.html"><li>Poland</li></a>
+        <a href="country-template.html"><li>Portugal</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="q">
+      <h1>Q</h1>
+      <ul>
+        <a href="country-template.html"><li>Qatar</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="r">
+      <h1>R</h1>
+      <ul>
+        <a href="country-template.html"><li>Romania</li></a>
+        <a href="country-template.html"><li>Russia</li></a>
+        <a href="country-template.html"><li>Rwanda</li></a>
+      </ul>
+    </div>
+    <div class="letter" class="letter" id="s">
+      <h1>S</h1>
+      <ul>
+        <a href="country-template.html"><li>Saint Kitts and Nevis</li></a>
+        <a href="country-template.html"><li>Saint Lucia</li></a>
+        <a href="country-template.html"><li>Saint Vincent and the Grenadines</li></a>
+        <a href="country-template.html"><li>Samoa</li></a>
+        <a href="country-template.html"><li>San Marino</li></a>
+        <a href="country-template.html"><li>Sao Tome and Principe</li></a>
+        <a href="country-template.html"><li>Saudi Arabia</li></a>
+        <a href="country-template.html"><li>Senegal</li></a>
+        <a href="country-template.html"><li>Serbia</li></a>
+        <a href="country-template.html"><li>Seychelles</li></a>
+        <a href="country-template.html"><li>Sierra Leone</li></a>
+        <a href="country-template.html"><li>Singapore</li></a>
+        <a href="country-template.html"><li>Slovakia</li></a>
+        <a href="country-template.html"><li>Slovenia</li></a>
+        <a href="country-template.html"><li>Solomon Islands</li></a>
+        <a href="country-template.html"><li>Somalia</li></a>
+        <a href="country-template.html"><li>South Africa</li></a>
+        <a href="country-template.html"><li>South Korea</li></a>
+        <a href="country-template.html"><li>South Sudan</li></a>
+        <a href="country-template.html"><li>Spain</li></a>
+        <a href="country-template.html"><li>Sri Lanka</li></a>
+        <a href="country-template.html"><li>Sudan</li></a>
+        <a href="country-template.html"><li>Suriname</li></a>
+        <a href="country-template.html"><li>Sweden</li></a>
+        <a href="country-template.html"><li>Switzerland</li></a>
+        <a href="country-template.html"><li>Syria</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="t">
+      <h1>T</h1>
+      <ul>
+        <a href="country-template.html"><li>Taiwan (Republic of China)</li></a>
+        <a href="country-template.html"><li>Tajikistan</li></a>
+        <a href="country-template.html"><li>Tanzania</li></a>
+        <a href="country-template.html"><li>Thailand</li></a>
+        <a href="country-template.html"><li>Togo</li></a>
+        <a href="country-template.html"><li>Tonga</li></a>
+        <a href="country-template.html"><li>Trinidad and Tobago</li></a>
+        <a href="country-template.html"><li>Tunisia</li></a>
+        <a href="country-template.html"><li>Turkey</li></a>
+        <a href="country-template.html"><li>Turkmenistan</li></a>
+        <a href="country-template.html"><li>Tuvalu</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="u">
+      <h1>U</h1>
+      <ul>
+        <a href="country-template.html"><li>Uganda</li></a>
+        <a href="country-template.html"><li>Ukraine</li></a>
+        <a href="country-template.html"><li>United Arab Emirates</li></a>
+        <a href="country-template.html"><li>United Kingdom</li></a>
+        <a href="country-template.html"><li>United States of America</li></a>
+        <a href="country-template.html"><li>Uruguay</li></a>
+        <a href="country-template.html"><li>Uzbekistan</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="v">
+      <h1>V</h1>
+      <ul>
+        <a href="country-template.html"><li>Vanuatu</li></a>
+        <a href="country-template.html"><li>Vatican City (Holy See)</li></a>
+        <a href="country-template.html"><li>Venezuela</li></a>
+        <a href="country-template.html"><li>Vietnam</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="y">
+      <h1>Y</h1>
+      <ul>
+        <a href="country-template.html"><li>Yemen</li></a>
+      </ul>
+    </div>
+    <div class="letter" id="z">
+      <h1>Z</h1>
+      <ul>
+        <a href="country-template.html"><li>Zambia</li></a>
+        <a href="country-template.html"><li>Zimbabwe</li></a>
+
+      </ul>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/CSSRulePlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/MotionPathPlugin.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

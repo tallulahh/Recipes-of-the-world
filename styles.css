@@ -1,0 +1,824 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  background-color: #d6f481;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #333;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.main-nav {
+  width: 100%;
+  height: 10rem;
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  /* font-family:  */
+  color: #eee;
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing: 1px;
+  outline: 2px solid #eee;
+  padding: 1rem 2rem;
+}
+
+#indexLogo a {
+  color: #333;
+  outline-color: #333;
+}
+
+#recipeLogo a {
+  color: #333;
+  outline-color: #333;
+}
+
+.hamburger-menu {
+  height: 4rem;
+  width: 4rem;
+  background-color: #eee;
+  border-radius: .4rem;
+  box-shadow:
+    .5rem .5rem 1rem #cacaca,
+    -.5rem -.5rem 1rem #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.hamburger-menu:hover {
+  box-shadow:
+    inset .5rem .5rem 1rem #cacaca,
+    inset -.5rem -.5rem 1rem #fff;
+}
+
+.bar {
+  width: 3rem;
+  height: 2px;
+  background-color: #333;
+  display: inline-block;
+  position: relative;
+  transition: background-color .5s;
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: #333;
+  transition: all .5s;
+}
+
+.bar::before {
+  top: -.8rem;
+}
+
+.bar::after {
+  top: .8rem;
+}
+
+.open .bar {
+  background-color: transparent;
+}
+
+.open .bar::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.open .bar::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+.nav-list {
+  width: 25rem;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #eee;
+  transform: translateX(55rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: -.5rem 0 1rem rgba(0, 0, 0, .1);
+  z-index: 1500;
+  transition: transform .5s;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  opacity: 0.8;
+}
+
+.open .nav-list {
+  transform: translateX(0);
+}
+
+.nav-link {
+  list-style: none;
+  border-bottom: 2px solid crimson;
+}
+
+.nav-link {
+  text-decoration: none;
+  display: block;
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: 700;
+  /* text-transform: uppercase; */
+  padding: .5rem;
+  transition: color .5s;
+}
+
+.nav-link:hover {
+  color: crimson;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/job13-271-chim-00611.jpg?auto=format&bg=transparent&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-3.1.0&mark=rawpixel-watermark.png&markalpha=90&markpad=13&markscale=10&markx=25&q=75&usm=15&vib=3&w=1400&s=eace88541fd224a80806f88f9cb8688e") center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-recipe {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://0201.nccdn.net/4_2/000/000/050/773/Cocina-1400x800.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.hero-clipped {
+  width: 60%;
+  height: inherit;
+  background-color: #eee;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+  transform-origin: right;
+  z-index: 10;
+}
+
+.hero-textbox {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  text-align: center;
+  line-height: 1.5;
+  padding: 1rem;
+  z-index: 20;
+}
+
+.main-heading {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+
+.sub-heading {
+  font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+.cta-btn {
+  display: inline-block;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #819df4;
+  padding: 1rem 4rem;
+  margin-top: 3%;
+  border-radius: .4rem;
+  box-shadow: 3px 3px 1rem rgba(0, 0, 0, .3);
+  position: relative;
+  cursor: pointer;
+}
+
+.cta-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.cta-btn:hover::after {
+  transform: scale(1.2);
+  opacity: 0;
+  transition: all .5s;
+}
+
+.guests {
+  width: 100%;
+  height: 700px;
+  padding: 10% 15%;
+  line-height: 2.7rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-family: 'Luckiest Guy', cursive;
+}
+
+.guests h1 {
+  font-size: 2.4rem;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.guests p {
+  padding: 0 10%;
+}
+
+.generator {
+  height: 650px;
+  width: 100%;
+  padding: 7% 0;
+}
+
+/* .generator a {
+  font-family: "Luckiest Guy", cursive;
+} */
+.country {
+  padding-top: 15%;
+  padding-bottom: 12%;
+  font-size: 3rem;
+  font-family: 'Luckiest Guy', cursive;
+  color: #333;
+}
+
+#countryGenerator {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.recipe {
+  visibility: hidden;
+  margin-bottom: 5%;
+}
+
+.recipe-main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: -10%;
+}
+
+.box {
+  width: 700px;
+  height: 550px;
+  background-image: url("https://rightcasa.com/image/banner/spanish%20foods.jpeg");
+  background-size: cover;
+  box-shadow: 0 0 30px 5px gray;
+}
+
+/* .box img{
+
+
+} */
+.text {
+  float: right;
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  padding: 2% 2%;
+  opacity: 0.9;
+}
+
+.text p {
+  font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+.text ul {
+  padding: 40px 30px;
+  line-height: 1.7rem;
+}
+
+.main-recipe-item {}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5%;
+  padding: 10% 10%;
+}
+
+.small-box {
+  width: 280px;
+  height: 200px;
+  background-color: gray;
+  position: relative;
+  box-shadow: 0 0 30px 5px gray;
+  margin: 1%;
+}
+
+.small-box img {
+  width: 100%;
+}
+
+.small-text {
+  background-color: white;
+  opacity: 0.8;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 25%;
+  padding: 5px 5px;
+}
+
+.small-text h4 {
+  font-size: 1.1rem;
+}
+
+.small-text p {
+  font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+.photo-of-the-week img {
+  padding: 20px;
+  object-fit: cover;
+  height: 480px;
+  width: 60%;
+}
+
+.photo-of-the-week {
+  padding-top: 20px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.photo-week-link {
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+/* INDEX PAGE */
+.index {
+  width: 80%;
+  height: auto;
+  background-color: white;
+  opacity: 0.9;
+  margin: 10% 10%;
+  padding-top: 10rem;
+  box-shadow: 0 0 30px 5px gray;
+}
+
+.index h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.index ul {
+  line-height: 2rem;
+  padding: 7rem 0 7rem 15rem;
+  font-size: 1.2rem;
+}
+
+/* COUNTRY TEMPLATE */
+.country-info {
+  background-color: white;
+  opacity: 0.9;
+  box-shadow: 0 0 30px 5px gray;
+  width: 80%;
+  height: 600px;
+  /* height: auto; */
+  margin: 7% 10%;
+  position: relative;
+  text-align: center;
+}
+
+.country-intro {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding-top: 30px;
+  margin-bottom: 10px;
+}
+
+.country-intro p {
+  width: 70%;
+  margin: 0 15%;
+  padding: 0 5%;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2rem;
+}
+
+.intro-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.flag {
+  background-color: gray;
+  width: 180px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.country-fact {
+  background-color: #eee;
+  opacity: 0.9;
+  width: 10rem;
+  height: auto;
+  float: right;
+  visibility: hidden;
+  margin: 6rem 1rem 0 0;
+  text-align: left;
+  padding: 10px 10px;
+  font-size: 1rem;
+  text-align: center;
+  border: 2px solid #333;
+  z-index: 1000;
+  box-shadow: 3px 3px 1rem rgba(0, 0, 0, .3);
+}
+
+.country-fact-question button {
+  width: 3rem;
+  height: 3rem;
+  padding: .5rem;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border-radius: .4rem;
+  box-shadow: 3px 3px 1rem rgba(0, 0, 0, .3);
+  cursor: pointer;
+}
+
+.featured-link {
+  width: 15rem;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -7.5rem;
+}
+
+.country-featured-recipes {
+  background-color: white;
+  opacity: 0.9;
+  box-shadow: 0 0 30px 5px gray;
+  width: 80%;
+  min-height: 750px;
+  height: auto;
+  margin: 7% 10%;
+  position: relative;
+  text-align: center;
+}
+
+.country-recipe-full-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  line-height: 1.8rem;
+  padding-bottom: 30px;
+}
+
+.country-featured-recipes h2 {
+  padding-top: 30px;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.country-featured-recipes h4 {
+  font-family: 'Liu Jian Mao Cao', cursive;
+  font-size: 1.7rem;
+}
+
+.country-featured-recipes ul {
+  padding-top: 20px;
+  padding-left: 10px;
+  list-style: none;
+}
+
+/* FEATURED RECIPE PAGE */
+.featured-recipe {
+  background-color: white;
+  opacity: 0.9;
+  box-shadow: 0 0 30px 5px gray;
+  width: 80%;
+  height: 150vh;
+  margin: 10% 10%;
+  position: relative;
+  text-align: center;
+}
+
+.top {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: left;
+}
+
+.top img {
+  width: 500px;
+  height: 320px;
+  object-fit: cover;
+  padding-top: 30px;
+}
+
+.top h1 {
+  font-size: 2.3rem;
+}
+
+.top ul {
+  list-style: none;
+  padding-top: 30px;
+}
+
+.bottom {
+  position: absolute;
+  top: 60vh;
+  margin: 0 7%;
+  text-align: left;
+  line-height: 1.5rem;
+}
+
+.bottom h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.bottom p {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.ingredients {
+  width: 30%;
+  float: left;
+}
+
+.ingredients ul {
+  list-style: none;
+  font-style: italic;
+}
+
+.method {
+  width: 70%;
+  float: right;
+}
+
+.recipe-link {
+  position: absolute;
+  width: 50%;
+  bottom: 20px;
+  margin: auto 25%;
+}
+
+#small-1 {
+  background-image: url("https://s19623.pcdn.co/wp-content/uploads/2018/06/food-in-saint-lucia.jpg");
+  background-size: contain;
+}
+
+#small-2 {
+  background-image: url("https://steemitimages.com/DQmboEEaLPF6Mthdzgwm344ELHuYbggFUrD1PvcNYemxSdH/nepali-food.jpg");
+  background-size: contain;
+}
+
+#small-3 {
+  background-image: url("https://photos.smugmug.com/Pakistan/i-QcV4cNt/0/0906a5eb/X3/pakistan-trip-118-X3.jpg");
+  background-size: contain;
+}
+
+#small-4 {
+  background-image: url("https://www.bbcgoodfood.com/sites/default/files/editor_files/2018/08/feta2.jpg");
+  background-size: contain;
+}
+
+@media screen and (max-width:1400px) {
+  .hero-clipped {
+    width: 100%;
+    height: 75vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+  }
+
+  .hero-clipped .cta-btn {
+    visibility: hidden;
+  }
+
+  .logo a {
+    color: #333;
+    outline-color: #333;
+  }
+
+  .row {
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 10px;
+    /* padding-bottom: 10px; */
+  }
+
+  .box {
+    /* padding-bottom: 50px */
+  }
+
+  .small-box {
+    margin-top: 10%;
+    margin-bottom: 50px;
+  }
+
+  .photo-of-the-week img {
+    width: 70%;
+    height: 460px;
+  }
+
+  .index {
+    margin-top: 13rem;
+  }
+
+  .featured-recipe {
+    margin-top: 13rem;
+  }
+
+}
+
+@media screen and (max-width:1100px) {
+  .guests h1 {
+    font-size: 1.8rem;
+  }
+
+  .guests p {
+    font-size: 1rem;
+  }
+
+  .top {
+    flex-direction: column-reverse;
+    margin: 10px auto;
+    padding: 40px 0;
+    height: 500px;
+  }
+
+  .top img {}
+
+  .bottom {
+    margin-top: 100px;
+  }
+
+  .ingredients {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .method {
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .country-fact {
+
+  }
+
+  .country-fact-question button {
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .main-heading {
+    margin-top: -3rem;
+    font-size: 3rem;
+  }
+
+  .cta-btn {
+    padding: 1rem 2.5rem;
+  }
+
+  .guests {
+    height: 700px;
+  }
+
+  .guests h1 {
+    font-size: 1.8rem;
+  }
+
+  .guests p {
+    padding: 20px 0 0;
+    font-size: 1rem;
+  }
+
+  .hero-clipped .cta-btn {
+    visibility: hidden;
+  }
+
+  .mission .cta-btn {
+    visibility: hidden;
+  }
+
+  .photo-of-the-week img {
+    width: 90%;
+    height: 400px;
+    margin: 30px 0;
+  }
+
+  .box {
+    width: 90%;
+    height: 550px;
+  }
+
+  .index ul {
+    line-height: 2rem;
+    padding: 7rem 0 7rem 8rem;
+    font-size: 1rem;
+  }
+
+  .top img {
+    width: 240px;
+    height: 180px;
+  }
+
+  .bottom h3 {
+    font-size: 1rem;
+  }
+
+  .bottom p, ul {
+    font-size: 0.8rem;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+}
+
+@media screen and (max-width:550px) {
+  .main-heading {
+    font-size: 2.2rem;
+  }
+
+  .sub-heading {
+    font-size: 1.3rem;
+  }
+
+  .nav-list {
+    width: 100%;
+  }
+
+  .cta-btn {
+    padding: 1rem 3rem;
+    font-size: 0.8rem;
+  }
+
+  .country {
+    font-size: 1.4rem;
+  }
+
+  .generator {
+    max-height: 100px;
+  }
+}
